@@ -45,6 +45,18 @@ public class TestCaseClass {
         //Point 3 : To get value from text field use getAttribute instead of getText()
         System.out.println("First value"+pcf.sendAttributeValuef());
         
+        /////Page Factory //////
+        //Point 1 : If real broswer is not available on machine then driver cannot be initiated of browser type 
+          WebDriverManager.edgedriver().setup();
+          //Point 2 : WebDriverManager auto downloads same version of driver which matches with actual browser
+          WebDriver driverff = new EdgeDriver();
+          PageClass pcff = new PageClass(driverf,"test");
+          driverf.get("file:///C:/Users/Shresha%20Reddy/Downloads/selenium-complete-practice.html");
+          System.out.println(driverf.getTitle());
+          pcff.sendData();
+          //Point 3 : To get value from text field use getAttribute instead of getText()
+          System.out.println("First value"+pcf.sendAttributeValuef());
+        
         
         
         driverf.quit();
